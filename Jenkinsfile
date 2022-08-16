@@ -4,7 +4,7 @@ pipeline {
     stage('Maven Build') {
       steps {
         sh 'mvn clean package'
-        sh "the JOB URL is $JOB_UR"
+        sh "echo The JOB URL is $JOB_URL"
       }
     }
   }
