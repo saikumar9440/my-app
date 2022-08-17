@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Deploy to Tomcat') {
       steps {
-        sshagent(['linux1']) {
+        sshagent(['tomcat-dev']) {
           //copy warfile to tomcat server
             sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.81.193:/opt/tomcat8/webapps/app.war'
           //stop tomcat server
