@@ -16,7 +16,7 @@ pipeline {
             sh "ssh ec2-user@172.31.81.193 /opt/tomcat8/bin/shutdown.sh"
           //start tomcat server
             sh "ssh ec2-user@172.31.81.193 /opt/tomcat8/bin/startup.sh"
-          }
+        }
       }
     }
   }
